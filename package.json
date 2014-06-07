@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "start": "node index.js"
+  },
+  "name": "TQTopicMap",
+  "version": "0.0.1",
+  "description": "TopicQuests TopicMap for NodeJS",
+  "main": "index.js",
+  "author": "jackpark",
+  "license": "Apache 2",
+  "dependencies": {
+    "es": "~0.4.4",
+    "stringbuilder": "0.0.10",
+    "node-uuid": "~1.4.1",
+    "dateformat": "~1.0.8-1.2.3",
+    "logger": "0.0.1",
+    "bcrypt-nodejs": "0.0.3"
+  }
+}
