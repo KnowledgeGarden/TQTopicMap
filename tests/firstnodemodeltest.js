@@ -1,5 +1,5 @@
 /**
- * New node file
+ * firstnodemodeltest.js
  */
 var env = require('../lib/environment'),
     nm = require('../lib/models/topicmodel');
@@ -13,7 +13,7 @@ TopicModel.newNode("foo","something to say","en","park",null,null,false, functio
 
 });
 
-TopicModel.newSimpleNode("MyFirstTopicTest","Bonjour","sa va?","fr","park",null,null,false, function(data) {
+TopicModel.newSimpleNode("MyFirstTopicTest-399","Bonjour","sa va?","fr","park",null,null,false, function(data) {
 	console.log(data.toJSON());
 
 });

@@ -8,14 +8,14 @@ var TopicMapEnvironment = module.exports = new env();
 var database = TopicMapEnvironment.getDatabase();
 var dataprovider = TopicMapEnvironment.getDataProvider();
 var proxy = new sp();
-proxy.setLocator("MyTestProxy");
+proxy.setLocator("MyTestProxy3");
 proxy.setNodeType("FancyNode");
 proxy.addSuperClassLocator('MySuper');
 
 console.log(proxy.toJSON());
 dataprovider.putNode(proxy,function(err,data) {
 	console.log('A '+err);
-	proxy.setLocator("MySecondTestProxy");
+	proxy.setLocator("MySecondTestProxy3");
 	dataprovider.putNode(proxy,function(err,data) {
 		console.log('B '+err);
 		

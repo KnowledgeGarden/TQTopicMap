@@ -23,7 +23,7 @@ var TopicModel = module.exports = function(environment) {
   self.newSimpleNode = function(locator, label, description,
 			 lang,  userId,  smallImagePath,
 			 largeImagePath,  isPrivate, callback) {
-	  console.log("11 "+locator+" | "+label+" | "+description+" | "+lang+" | "+userId+" | "+smallImagePath+" | "+largeImagePath+" | "+isPrivate+" | "+callback);
+	console.log('BB '+locator);
 	var result = new SubjectProxy();
 	result.setLocator(locator);
 	result.setCreatorId(userId);
@@ -35,6 +35,7 @@ var TopicModel = module.exports = function(environment) {
 		result.addLabel(label, lang);
 	if (description)
 		result.addDetails(description, lang);
+	console.log('CC '+result.toJSON());
 	//TODO much more
 	callback(result);
   };
@@ -43,6 +44,7 @@ var TopicModel = module.exports = function(environment) {
 		 				lang,  userId,  smallImagePath,
 		 				largeImagePath,  isPrivate, callback) {
 	  var lox = this.dataProvider.uuid();
+	  console.log('AA '+lox);
 	  self.newSimpleNode(lox,label,description,lang,userId,smallImagePath,largeImagePath,isPrivate,function(data) {
 	    callback(data);
 	  });
@@ -51,16 +53,17 @@ var TopicModel = module.exports = function(environment) {
   self.newSubclassNode = function(superClassLocator, label, description,
 			lang,  userId,  smallImagePath,
 			largeImagePath,  isPrivate, callback) {
-	  console.log("22 "+superClassLocator+" | "+label+" | "+description+" | "+lang+" | "+userId+" | "+smallImagePath+" | "+largeImagePath+" | "+isPrivate+" | "+callback);
-	  self.newNode(label,description,lang,userId,smallImagePath,largeImagePath,isPrivate,function(data) {
+      var lox = this.dataProvider.uuid();
+	  console.log('AA '+lox);
+	  self.newSimpleNode(lox,label,description,lang,userId,smallImagePath,largeImagePath,isPrivate,function(data) {
 		data.addSuperClassLocator(superClassLocator);
 	    callback(data);
 	  });
   };
-  self.newSimpleSubclassNode = function(locator, superClassLocator, label, description,
+  self.newSubclassNode = function(locator, superClassLocator, label, description,
 				lang,  userId,  smallImagePath,
 				largeImagePath,  isPrivate, callback) {
-	  self.newSimpleNode(locator,label,description,lang,userId,smallImagePath,largeImagePath,isPrivate,function(data) {
+	  self.newNode(locator,label,description,lang,userId,smallImagePath,largeImagePath,isPrivate,function(data) {
 	    data.addSuperClassLocator(superClassLocator);
 	    callback(data);
 	  });
@@ -68,15 +71,17 @@ var TopicModel = module.exports = function(environment) {
   self.newInstanceNode = function(superClassLocator, label, description,
 			lang,  userId,  smallImagePath,
 			largeImagePath,  isPrivate, callback) {
-	  self.newNode(label,description,lang,userId,smallImagePath,largeImagePath,isPrivate,function(data) {
+      var lox = this.dataProvider.uuid();
+	  console.log('AA '+lox);
+	  self.newSimpleNode(lox,label,description,lang,userId,smallImagePath,largeImagePath,isPrivate,function(data) {
 		data.addSuperClassLocator(superClassLocator);
 	    callback(data);
 	  });
   };
-  self.newSimpleInstanceNode = function(locator, superClassLocator, label, description,
+  self.newInstanceNode = function(locator, superClassLocator, label, description,
 				lang,  userId,  smallImagePath,
 				largeImagePath,  isPrivate, callback) {
-	  self.newSimpleNode(locator,label,description,lang,userId,smallImagePath,largeImagePath,isPrivate,function(data) {
+	  self.newNode(locator,label,description,lang,userId,smallImagePath,largeImagePath,isPrivate,function(data) {
 	    data.addSuperClassLocator(superClassLocator);
 	    callback(data);
 	  });
