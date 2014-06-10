@@ -21,15 +21,15 @@
 //   console.log('TopicMapEnvironment+ '+this.ESClient.hello());
 //   which is similar to here -- ESClient sets its own var -- fails
 ///////////////////////////////////
-var env = require('../lib/environment'),
-    sp  = require('../lib/models/subjectproxy');
+var env = require('../lib/environment')
+   , EventEmitter = require('events').EventEmitter
+    ,sp  = require('../lib/models/subjectproxy');
 
-function waitFunction(err) {
-	  console.log("STARTING "+err+' '+TopicMapEnvironment.hello());
+var begin = function(){
+	  console.log("STARTING "+TopicMapEnvironment.hello());
 	  var database = TopicMapEnvironment.getDatabase();
 	  var dataprovider = TopicMapEnvironment.getDataProvider();
 	  console.log("STARTING-1 "+database+' '+dataprovider);
-	  if (!err) {
 	    var proxy = new sp();
 	    proxy.setLocator("MyTestProxy");
 	    proxy.setNodeType("FancyNode");
@@ -56,9 +56,12 @@ function waitFunction(err) {
 			console.log('F '+data.toJSON());
 		
 	    });
-	  }
+	  
 }
-var TopicMapEnvironment = new env(waitFunction);
+
+var TopicMapEnvironment = new env();
+var ESClient = TopicMapEnvironment.getDatabase();
+ESClient.on('onReady', begin);
 //This console.log runs fine BEFORE the same call above in waitFunction
 console.log("DANG "+TopicMapEnvironment.hello());
 /*
