@@ -1,61 +1,77 @@
 /**
  * query testing es
  */
-var env = require('../lib/environment'),
-    sp  = require('../lib/models/subjectproxy');
+var env = require('../lib/environment')
+  , EventEmitter = require('events').EventEmitter
+  , sp  = require('../lib/models/subjectproxy');
 
-var TopicMapEnvironment = module.exports = new env();
-var database = TopicMapEnvironment.getDatabase();
-var dataprovider = TopicMapEnvironment.getDataProvider();
-var proxy = new sp();
-proxy.setLocator("MyTestProxy3");
-proxy.setNodeType("FancyNode");
-proxy.addSuperClassLocator('MySuper');
+var TopicMapEnvironment = new env();
 
-console.log(proxy.toJSON());
-dataprovider.putNode(proxy,function(err,data) {
+var begin = function() {
+  console.log("STARTING "+TopicMapEnvironment.hello());
+
+  var database = TopicMapEnvironment.getDatabase();
+  var dataprovider = TopicMapEnvironment.getDataProvider();
+  var proxy = new sp();
+  proxy.setLocator("MyTestProxy3");
+  proxy.setNodeType("FancyNode");
+  proxy.addSuperClassLocator('MySuper');
+
+  console.log(proxy.toJSON());
+  dataprovider.putNode(proxy,function(err,data) {
 	console.log('A '+err);
 	proxy.setLocator("MySecondTestProxy3");
 	dataprovider.putNode(proxy,function(err,data) {
-		console.log('B '+err);
-		proxy.setLocator('YetAnotherProxy');
-		proxy.setNodeType('NotSoFancyNode');
-		proxy.setResourceUrl('http://google.com/');
-		dataprovider.putNode(proxy,function(err,data) {
-			console.log('C '+err);
+    console.log('B '+err);
+    proxy.setLocator('YetAnotherProxy');
+    proxy.setNodeType('NotSoFancyNode');
+    proxy.setResourceUrl('http://google.com/');
+    console.log('BB '+JSON.stringify(proxy));
+    dataprovider.putNode(proxy,function(err,data) {
+      console.log('C '+err);
+      var credentials = null;
+			var QueryDSL = TopicMapEnvironment.getQueryDSL();
+			var query = QueryDSL.findNodeByType("FancyNode");
+			console.log('Query: '+JSON.stringify(query));
+			dataprovider.search(query,credentials,function(err,data){
+				console.log('C '+err);
+				console.log('D '+data);
+				if (data) {
+					console.log('E '+data);
+					var p,len = data.length;
+					console.log('YYY '+len);
+					for (var i=0;i<len;i++)
+						console.log(data[i].toJSON());
+//TODO: query is not working well here
+//YYY 4
+//Query: {"match":{"instanceOf":"FancyNode"}}
+//GOOD{"locator":"MyTestProxy","instanceOf":"FancyNode","subOf":["MySuper"]}
+//BAD{"locator":"YetAnotherProxy","instanceOf":"NotSoFancyNode","subOf":["MySuper"],"url":"http://google.com/"}
+//GOOD{"locator":"MySecondTestProxy3","instanceOf":"FancyNode","subOf":["MySuper"]}
+//BAD{"locator":"MyTestProxy3","instanceOf":"FancyNode","subOf":["MySuper"]}
+				}
+				query = QueryDSL.findNodeByURL('http://google.com/');
+				console.log('Query2: '+JSON.stringify(query));
+				dataprovider.search(query,credentials,function(err,data){
+					console.log('M '+err);
+					console.log('N '+data);
+					if (data) {
+						console.log('O '+data);
+						var p,len = data.length;
+						console.log('ZZZ '+len);
+						for (var i=0;i<len;i++)
+							console.log(data[i].toJSON());
+					}
+				} );
+			});		
 		});
-		
 	});
-});
+  });
+};
 
-var credentials = null;
-var QueryDSL = TopicMapEnvironment.getQueryDSL();
-var query = QueryDSL.findNodeByType("FancyNode");
-console.log('Query: '+JSON.stringify(query));
-dataprovider.search(query,credentials,function(err,data){
-	console.log('C '+err);
-	console.log('D '+data);
-	if (data) {
-		console.log('E '+data);
-		var p,len = data.length;
-		console.log('YYY '+len);
-		for (var i=0;i<len;i++)
-			console.log(data[i].toJSON());
-	}
-	query = QueryDSL.findNodeByURL('http://google.com/');
-	console.log('Query2: '+JSON.stringify(query));
-	dataprovider.search(query,credentials,function(err,data){
-		console.log('M '+err);
-		console.log('N '+data);
-		if (data) {
-			console.log('O '+data);
-			var p,len = data.length;
-			console.log('ZZZ '+len);
-			for (var i=0;i<len;i++)
-				console.log(data[i].toJSON());
-		}
-	} );
-});
+var ESClient = TopicMapEnvironment.getDatabase();
+ESClient.on('onReady', begin);
+
 /* most recent
 {"locator":"MyTestProxy","instanceOf":"FancyNode","subOf":["MySuper"]}
 Query: [Object StringBuilder]
