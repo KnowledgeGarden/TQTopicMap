@@ -18,13 +18,20 @@ dataprovider.putNode(proxy,function(err,data) {
 	proxy.setLocator("MySecondTestProxy3");
 	dataprovider.putNode(proxy,function(err,data) {
 		console.log('B '+err);
+		proxy.setLocator('YetAnotherProxy');
+		proxy.setNodeType('NotSoFancyNode');
+		proxy.setResourceUrl('http://google.com/');
+		dataprovider.putNode(proxy,function(err,data) {
+			console.log('C '+err);
+		});
 		
 	});
 });
+
 var credentials = null;
 var QueryDSL = TopicMapEnvironment.getQueryDSL();
 var query = QueryDSL.findNodeByType("FancyNode");
-console.log('Query: '+query);
+console.log('Query: '+JSON.stringify(query));
 dataprovider.search(query,credentials,function(err,data){
 	console.log('C '+err);
 	console.log('D '+data);
@@ -35,8 +42,20 @@ dataprovider.search(query,credentials,function(err,data){
 		for (var i=0;i<len;i++)
 			console.log(data[i].toJSON());
 	}
-
-} );
+	query = QueryDSL.findNodeByURL('http://google.com/');
+	console.log('Query2: '+JSON.stringify(query));
+	dataprovider.search(query,credentials,function(err,data){
+		console.log('M '+err);
+		console.log('N '+data);
+		if (data) {
+			console.log('O '+data);
+			var p,len = data.length;
+			console.log('ZZZ '+len);
+			for (var i=0;i<len;i++)
+				console.log(data[i].toJSON());
+		}
+	} );
+});
 /* most recent
 {"locator":"MyTestProxy","instanceOf":"FancyNode","subOf":["MySuper"]}
 Query: [Object StringBuilder]
