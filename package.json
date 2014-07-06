@@ -12,7 +12,7 @@
     "es": "~0.4.4",
     "node-uuid": "~1.4.1",
     "dateformat": "~1.0.8-1.2.3",
-    "logger": "0.0.1",
-    "bcrypt-nodejs": "0.0.3"
+    "bcrypt-nodejs": "0.0.3",
+    "log4js": "~0.6.15"
   }
 }
