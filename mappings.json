@@ -15,6 +15,11 @@
             "type": "string",
             "store": "yes"
         },
+    	 "sortDate": {
+    	 "index": "not_analyzed",
+         "type": "long",
+         "store": "yes"
+        },
         "lists": {
             "properties": {
                 "subOf": {

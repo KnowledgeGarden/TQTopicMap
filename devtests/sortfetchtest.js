@@ -27,25 +27,25 @@ new index(function(err,data) {
 		  console.log(data[i].toJSON());
 /**
 {"locator":"DateFourthTopic","creatorId":"SystemUser","smallIcon":"","largeIcon"
-:"","createdDate":"2014-08-04T00:00:00","sortDate":"2014-08-04T07:00:00.000Z","l
-astEditDate":"2014-07-06T19:45:09","isPrivate":"false","label":["Third instance
-node"],"details":["Also Seems likely"],"instanceOf":"SortTestType","transitiveCl
-osure":["SortTestType"]}
+:"","createdDate":"2014-08-04T00:00:00","sortDate":1407135600000,"lastEditDate":
+"2014-07-07T13:50:55","isPrivate":"false","label":["Third instance node"],"detai
+ls":["Also Seems likely"],"instanceOf":"SortTestType","transitiveClosure":["Sort
+TestType"]}
 {"locator":"DateThirdTopic","creatorId":"SystemUser","smallIcon":"","largeIcon":
-"","createdDate":"2014-08-03T00:00:00","sortDate":"2014-08-03T07:00:00.000Z","la
-stEditDate":"2014-07-06T19:45:09","isPrivate":"false","label":["Second instance
-node"],"details":["Seems likely too"],"instanceOf":"SortTestType","transitiveClo
-sure":["SortTestType"]}
+"","createdDate":"2014-08-03T00:00:00","sortDate":1407049200000,"lastEditDate":"
+2014-07-07T13:50:55","isPrivate":"false","label":["Second instance node"],"detai
+ls":["Seems likely too"],"instanceOf":"SortTestType","transitiveClosure":["SortT
+estType"]}
 {"locator":"DateSecondTopic","creatorId":"SystemUser","smallIcon":"","largeIcon"
-:"","createdDate":"2014-08-02T00:00:00","sortDate":"2014-08-02T07:00:00.000Z","l
-astEditDate":"2014-07-06T19:45:08","isPrivate":"false","label":["First instance
-node"],"details":["Seems likely"],"instanceOf":"SortTestType","transitiveClosure
-":["SortTestType"]}
+:"","createdDate":"2014-08-02T00:00:00","sortDate":1406962800000,"lastEditDate":
+"2014-07-07T13:50:55","isPrivate":"false","label":["First instance node"],"detai
+ls":["Seems likely"],"instanceOf":"SortTestType","transitiveClosure":["SortTestT
+ype"]}
 {"locator":"DateFirstTopic","creatorId":"SystemUser","smallIcon":"","largeIcon":
-"","createdDate":"2014-08-01T00:00:00","sortDate":"2014-08-01T07:00:00.000Z","la
-stEditDate":"2014-07-06T19:45:08","isPrivate":"false","label":["My very first no
-de"],"details":["we always knew this would happen"],"instanceOf":"SortTestType",
-"transitiveClosure":["SortTestType"]}
+"","createdDate":"2014-08-01T00:00:00","sortDate":1406876400000,"lastEditDate":"
+2014-07-07T13:50:54","isPrivate":"false","label":["My very first node"],"details
+":["we always knew this would happen"],"instanceOf":"SortTestType","transitiveCl
+osure":["SortTestType"]}
  */	  
   });
 });

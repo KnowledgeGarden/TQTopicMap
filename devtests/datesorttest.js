@@ -29,10 +29,10 @@ new index(function(err,data) {
      // console.log("A "+err+" "+data);
 /*
 A {"locator":"DateFirstTopic","creatorId":"SystemUser","smallIcon":"","largeIcon
-":"","createdDate":"2014-08-01T00:00:00","sortDate":"2014-08-01T07:00:00.000Z","
-lastEditDate":"2014-07-06T19:45:08","isPrivate":"false","label":["My very first
-node"],"details":["we always knew this would happen"],"instanceOf":"SortTestType
-","transitiveClosure":["SortTestType"]}
+":"","createdDate":"2014-08-01T00:00:00","sortDate":1406876400000,"lastEditDate"
+:"2014-07-07T13:50:54","isPrivate":"false","label":["My very first node"],"detai
+ls":["we always knew this would happen"],"instanceOf":"SortTestType","transitive
+Closure":["SortTestType"]}
 
  */
       //second proxy
@@ -44,11 +44,11 @@ node"],"details":["we always knew this would happen"],"instanceOf":"SortTestType
         dataProvider.putNode(proxyB, function(err, data) {
  //           console.log("B "+err+" "+data);
  /*
-  B {"locator":"DateSecondTopic","creatorId":"SystemUser","smallIcon":"","largeIco
-n":"","createdDate":"2014-08-02T00:00:00","sortDate":"2014-08-02T07:00:00.000Z",
-"lastEditDate":"2014-07-06T19:45:08","isPrivate":"false","label":["First instanc
-e node"],"details":["Seems likely"],"instanceOf":"SortTestType","transitiveClosu
-re":["SortTestType"]}
+B {"locator":"DateSecondTopic","creatorId":"SystemUser","smallIcon":"","largeIco
+n":"","createdDate":"2014-08-02T00:00:00","sortDate":1406962800000,"lastEditDate
+":"2014-07-07T13:50:55","isPrivate":"false","label":["First instance node"],"det
+ails":["Seems likely"],"instanceOf":"SortTestType","transitiveClosure":["SortTes
+tType"]}
 
   */
             //third proxy
@@ -60,12 +60,11 @@ re":["SortTestType"]}
               dataProvider.putNode(proxyC, function(err, data) {
                   //console.log("C "+err+" "+data);
  /**
-  C {"locator":"DateThirdTopic","creatorId":"SystemUser","smallIcon":"","largeIcon
-":"","createdDate":"2014-08-03T00:00:00","sortDate":"2014-08-03T07:00:00.000Z","
-lastEditDate":"2014-07-06T19:45:09","isPrivate":"false","label":["Second instanc
-e node"],"details":["Seems likely too"],"instanceOf":"SortTestType","transitiveC
-losure":["SortTestType"]}
-
+C {"locator":"DateThirdTopic","creatorId":"SystemUser","smallIcon":"","largeIcon
+":"","createdDate":"2014-08-03T00:00:00","sortDate":1407049200000,"lastEditDate"
+:"2014-07-07T13:50:55","isPrivate":"false","label":["Second instance node"],"det
+ails":["Seems likely too"],"instanceOf":"SortTestType","transitiveClosure":["Sor
+tTestType"]}
   */
                   //fourth proxy
                   topicModel.newInstanceNode(lox4,type1,"Third instance node","Also Seems likely", "en",
@@ -77,10 +76,10 @@ losure":["SortTestType"]}
                      //   console.log("D "+err+" "+data);
  /*
 D {"locator":"DateFourthTopic","creatorId":"SystemUser","smallIcon":"","largeIco
-n":"","createdDate":"2014-08-04T00:00:00","sortDate":"2014-08-04T07:00:00.000Z",
-"lastEditDate":"2014-07-06T19:45:09","isPrivate":"false","label":["Third instanc
-e node"],"details":["Also Seems likely"],"instanceOf":"SortTestType","transitive
-Closure":["SortTestType"]}
+n":"","createdDate":"2014-08-04T00:00:00","sortDate":1407135600000,"lastEditDate
+":"2014-07-07T13:50:55","isPrivate":"false","label":["Third instance node"],"det
+ails":["Also Seems likely"],"instanceOf":"SortTestType","transitiveClosure":["So
+rtTestType"]}
  
   */              		 
                     });
