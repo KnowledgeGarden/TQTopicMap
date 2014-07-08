@@ -20,6 +20,11 @@
          "type": "long",
          "store": "yes"
         },
+   	     "tupleCount": {
+    	 "index": "not_analyzed",
+         "type": "long",
+         "store": "yes"
+        },
         "lists": {
             "properties": {
                 "subOf": {
