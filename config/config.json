@@ -1,4 +1,5 @@
 {
 	"clusters": [ {"host":"localhost","port":"9200"}],
+	"shouldBootstrap":true,
 	"comment": "We can use this to define default admins, etc"
 }
