@@ -24,6 +24,7 @@
 {"lox":"VirtualNodeType","sbOf":"NodeType","label":"VirtualNodeType","details":"Topic Map upper VirtualNode type","sIco":"/images/cogwheel_sm.png","lIco":"/images/cogwheel.png","trCl":["TypeType","ClassType"]},
 {"lox":"AvatarNodeType","sbOf":"NodeType","label":"AvatarNodeType","details":"Topic Map upper AvatarNode type","sIco":"/images/cogwheel_sm.png","lIco":"/images/cogwheel.png","trCl":["TypeType","ClassType"]},
 {"lox":"BlogNodeType","sbOf":"NodeType","label":"BlogNodeType","details":"Topic Map upper BlogNode type","sIco":"/images/cogwheel_sm.png","lIco":"/images/cogwheel.png","trCl":["TypeType","ClassType"]},
+{"lox":"WikiNodeType","sbOf":"NodeType","label":"WikiNodeType","details":"Topic Map upper WikiNode type","sIco":"/images/cogwheel_sm.png","lIco":"/images/cogwheel.png","trCl":["TypeType","ClassType"]},
 {"lox":"ChallengeNodeType","sbOf":"NodeType","label":"ChallengeNodeType","details":"Topic Map upper ChallengeNode type","sIco":"/images/cogwheel_sm.png","lIco":"/images/cogwheel.png","trCl":["TypeType","ClassType"]},
 {"lox":"EssayNodeType","sbOf":"NodeType","label":"EssayNodeType","details":"Topic Map upper EssayNode type","sIco":"/images/cogwheel_sm.png","lIco":"/images/cogwheel.png","trCl":["TypeType","ClassType"]},
 {"lox":"EvidenceType","sbOf":"NodeType","label":"EvidenceType","details":"Topic Map upper EvidenceNode type","sIco":"/images/cogwheel_sm.png","lIco":"/images/cogwheel.png","trCl":["TypeType","ClassType"]},
