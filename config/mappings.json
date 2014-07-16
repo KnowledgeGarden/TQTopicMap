@@ -1,44 +1,44 @@
 {
     "properties": {
-        "locator": {
+        "lox": {
             "index": "not_analyzed",
             "type": "string",
             "store": "yes"
         },
-        "instanceOf": {
+        "inOf": {
             "index": "not_analyzed",
             "type": "string",
             "store": "yes"
         },
-         "_version": {
+         "_ver": {
             "index": "not_analyzed",
             "type": "string",
             "store": "yes"
         },
-    	 "sortDate": {
+    	 "srtDt": {
     	 "index": "not_analyzed",
          "type": "long",
          "store": "yes"
         },
-   	     "tupleCount": {
+   	     "tpC": {
     	 "index": "not_analyzed",
          "type": "long",
          "store": "yes"
         },
         "lists": {
             "properties": {
-                "subOf": {
+                "sbOf": {
                     "index": "not_analyzed",
                     "type": "string",
                     "store": "yes"
                 },
                 "label": {
-                    "index": "not_analyzed",
+                    "index": "analyzed",
                     "type": "string",
                     "store": "yes"
                 },
                 "details": {
-                    "index": "not_analyzed",
+                    "index": "analyzed",
                     "type": "string",
                     "store": "yes"
                 }

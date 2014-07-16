@@ -31,12 +31,12 @@ new index(function(err,data) {
 				  dataProvider.listInstanceNodes(type1,0,-1, credentials, function(err,data) {
 					  console.log("E "+err+" "+data);
 					  var len = data.length;
-					  for (var i=0;i<len;i++)
+					  for (var i=0;i<len;i++) // should return 2
 						  console.log(data[i].toJSON());
 					  dataProvider.listInstanceNodes(type2,0,-1, credentials, function(err,data) {
 						  console.log("F "+err+" "+data);
 						  var len = data.length;
-						  for (var i=0;i<len;i++)
+						  for (var i=0;i<len;i++) // should return 1
 							  console.log(data[i].toJSON());
 						  dataProvider.listNodesByLabel("\"First instance node\"",constants.ENGLISH, 0,-1, credentials, function(err,data) {
 							  console.log("G "+err+" "+data);
