@@ -41,6 +41,16 @@
                     "index": "analyzed",
                     "type": "string",
                     "store": "yes"
+                },
+                "subj": {
+                    "index": "analyzed",
+                    "type": "string",
+                    "store": "yes"
+                },
+                "body": {
+                    "index": "analyzed",
+                    "type": "string",
+                    "store": "yes"
                 }
             }
         }
