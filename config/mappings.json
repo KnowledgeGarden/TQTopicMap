@@ -51,7 +51,13 @@
                     "index": "analyzed",
                     "type": "string",
                     "store": "yes"
+                },
+                "psi": {
+                    "index": "not_analyzed",
+                    "type": "string",
+                    "store": "yes"
                 }
+
             }
         }
     }
