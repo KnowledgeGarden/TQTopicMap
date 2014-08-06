@@ -38,6 +38,7 @@
 {"lox":"TagNodeType","sbOf":"NodeType","label":"TagNodeType","details":"Topic Map upper TagNode type","sIco":"/images/cogwheel_sm.png","lIco":"/images/cogwheel.png","trCl":["TypeType","ClassType"]},
 {"lox":"ThemeNodeType","sbOf":"NodeType","label":"ThemeNodeType","details":"Topic Map upper ThemeNode type","sIco":"/images/cogwheel_sm.png","lIco":"/images/cogwheel.png"},
 {"lox":"BookmarkNodeType","sbOf":"NodeType","label":"BookmarkNodeType","details":"Topic Map upper BookmarkNode type","sIco":"/images/cogwheel_sm.png","lIco":"/images/cogwheel.png","trCl":["TypeType","ClassType"]},
+{"lox":"AnnotationNodeType","sbOf":"NodeType","label":"AnnotationNodeType","details":"Topic Map upper AnnotationNode type","sIco":"/images/cogwheel_sm.png","lIco":"/images/cogwheel.png","trCl":["TypeType","ClassType"]},
 {"lox":"QuestNodeType","sbOf":"NodeType","label":"QuestNodeType","details":"Topic Map upper QuestNode type","sIco":"/images/cogwheel_sm.png","lIco":"/images/cogwheel.png","trCl":["TypeType","ClassType"]},
 {"lox":"CitationNodeType","sbOf":"NodeType","label":"CitationNodeType","details":"Topic Map upper CitationNode type","sIco":"/images/cogwheel_sm.png","lIco":"/images/cogwheel.png","trCl":["TypeType","ClassType"]},
 {"lox":"GraphNodeType","sbOf":"NodeType","label":"GraphNodeType","details":"Topic Map upper GraphNode type","sIco":"/images/cogwheel_sm.png","lIco":"/images/cogwheel.png","trCl":["TypeType","ClassType"]},
