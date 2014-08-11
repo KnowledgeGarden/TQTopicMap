@@ -25,6 +25,11 @@
          "type": "long",
          "store": "yes"
         },
+  	     "url": {
+  	    	 "index": "not_analyzed",
+  	         "type": "string",
+  	         "store": "yes"
+  	    },
         "lists": {
             "properties": {
                 "sbOf": {
