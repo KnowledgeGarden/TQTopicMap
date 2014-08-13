@@ -24,6 +24,7 @@ new index(function(err,data) {
   topicModel.newNode(lox1,"My very first node", "we always knew this would happen", "en",
 			"SystemUser","","",false, function(data) {
     proxyA = data;
+    proxyA.setResourceUrl("http://google.com/")
     Environment.logDebug('A '+proxyA.toJSON()); //TODO logging doesn't work
     dataProvider.putNode(proxyA, function(err, data) {
       console.log("A "+err+" "+data);
@@ -32,6 +33,7 @@ new index(function(err,data) {
   			"SystemUser","","",false, credentials, function(err,data) {
         proxyB = data;
         proxyB.addSuperClassLocator(lox5); //NOTE, this doesn't really deal with transitive closure
+        proxyB.setResourceUrl("http://foo.bar");
         console.log("AB "+proxyB.toJSON());
         dataProvider.putNode(proxyB, function(err, data) {
             console.log("B "+err+" "+data);
@@ -39,6 +41,7 @@ new index(function(err,data) {
             topicModel.newInstanceNode(lox3,type1,"Second instance node","Seems likely too", "en",
         			"SystemUser","","",false, credentials, function(err,data) {
               proxyC = data;
+              proxyC.setResourceUrl("http://bar.bar");
               proxyC.addSuperClassLocator(lox5); //NOTE, this doesn't really deal with transitive closure
               dataProvider.putNode(proxyC, function(err, data) {
                   console.log("C "+err+" "+data);

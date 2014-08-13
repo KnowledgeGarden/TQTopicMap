@@ -28,18 +28,20 @@ new index(function(err,data) {
 			  dataProvider.getNodeByLocator(lox4, credentials, function(err,data) {
 				  console.log("D "+err+" "+data.toJSON());
 				  //OK to here
-				  dataProvider.listInstanceNodes(type1,0,-1, credentials, function(err,data) {
-					  console.log("E "+err+" "+data);
+				  dataProvider.listInstanceNodes(type1,0,-1, credentials, function(err,data,count) {
+					  console.log("E "+err+" "+data+" "+count);
 					  var len = data.length;
 					  for (var i=0;i<len;i++) // should return 2
 						  console.log(data[i].toJSON());
-					  dataProvider.listInstanceNodes(type2,0,-1, credentials, function(err,data) {
-						  console.log("F "+err+" "+data);
+					  dataProvider.listInstanceNodes(type2,0,-1, credentials, function(err,data,count) {
+						  console.log("F "+err+" "+data+" "+count);
+						  //should get 1
 						  var len = data.length;
 						  for (var i=0;i<len;i++) // should return 1
 							  console.log(data[i].toJSON());
-						  dataProvider.listNodesByLabel("\"First instance node\"",constants.ENGLISH, 0,-1, credentials, function(err,data) {
-							  console.log("G "+err+" "+data);
+						  dataProvider.listNodesByLabel("\"First instance node\"",constants.ENGLISH, 0,-1, credentials, function(err,data,count) {
+							  console.log("G "+err+" "+data+" "+count);
+							  //should get 1
 //{"locator":"NodeBuilderSecondTopic","creatorId":"SystemUser","smallIcon":"","lar
 //	geIcon":"","createdDate":"2014-12-05 14:07:41","lastEditDate":"2014-12-05 14:07:
 //		41","isPrivate":"false","label":["First instance node"],"details":["Seems likely
@@ -49,8 +51,10 @@ new index(function(err,data) {
 							    for (var i=0;i<len;i++)
 								  console.log(data[i].toJSON());
 							  }
-							  dataProvider.listSubclassNodes(lox5, 0,-1, credentials, function(err,data) {
-								  console.log("H "+err+" "+data);
+							  dataProvider.listSubclassNodes(lox5, 0,-1, credentials, function(err,data, count) {
+								  //{"query":{"term":{"sbOf":"ASuperClass"}}}
+								  console.log("H "+err+" | "+data+" | "+count);
+								  //should get 2
 								  if (data) {
 								    var len = data.length;
 								    for (var i=0;i<len;i++)
