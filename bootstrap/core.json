@@ -58,6 +58,7 @@
 {"lox":"ConversationMapNodeType","sbOf":"NodeType","label":"ConversationMapNodeType","details":"Topic Map upper ConversationMapNode type","sIco":"/images/cogwheel_sm.png","lIco":"/cogwheel.png","trCl":["TypeType","ClassType"]},
 {"lox":"ConNodeType","sbOf":"NodeType","label":"ConNodeType","details":"Topic Map upper ConNode type","sIco":"/images/cogwheel_sm.png","lIco":"/images/cogwheel.png","trCl":["TypeType","ClassType"]},
 {"lox":"ProNodeType","sbOf":"NodeType","label":"ProNodeType","details":"Topic Map upper ProNode type","sIco":"/images/cogwheel_sm.png","lIco":"/images/cogwheel.png","trCl":["TypeType","ClassType"]},
+{"lox":"NoteNodeType","sbOf":"NodeType","label":"NoteNodeType","details":"Topic Map upper NoteNode type","sIco":"/images/cogwheel_sm.png","lIco":"/images/cogwheel.png","trCl":["TypeType","ClassType"]},
 
 {"comment":"Lower levels: roletypes"},
 {"lox":"IdeaRoleType","sbOf":"RoleType","label":"IdeaRole","details":"Topic Map upper IdeaRole type","sIco":"/images/cogwheel_sm.png","lIco":"/images/cogwheel.png","trCl":["TypeType"]},
