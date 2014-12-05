@@ -3,7 +3,7 @@
     "start": "node index.js"
   },
   "name": "TQTopicMap",
-  "version": "0.11.2",
+  "version": "0.11.3",
   "description": "TopicQuests TopicMap for NodeJS",
   "main": "index.js",
   "author": "jackpark",
