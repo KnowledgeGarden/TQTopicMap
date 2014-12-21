@@ -1,6 +1,4 @@
 {"nodes":[
-  {"comment":"This file is for the many relation types"},
-  {"comment":"These correspond with types.js and ITopicQuestsOntology.java"},
   {"lox":"CausesRelationType","sbOf":"RelationType","label":"Causes","details":"Topic Map upper CausesRelation relation type","sIco":"/images/snowflake_sm.png","lIco":"/images/snowflake.png","trCl":["TypeType"]},
   {"lox":"ExplainsWhatRelationType","sbOf":"RelationType","label":"Explains What","details":"Topic Map upper ExplainsWhat relation type","sIco":"/images/snowflake_sm.png","lIco":"/images/snowflake.png","trCl":["TypeType"]},
   {"lox":"ExplainsWhyRelationType","sbOf":"RelationType","label":"Explains Why","details":"Topic Map upper ExplainsWhy relation type","sIco":"/images/snowflake_sm.png","lIco":"/images/snowflake.png","trCl":["TypeType"]},
@@ -36,15 +34,12 @@
   {"lox":"EnvisagesRelationRelationType","sbOf":"RelationType","label":"Envisages","details":"Topic Map upper Envisages relation type","sIco":"/images/snowflake_sm.png","lIco":"/images/snowflake.png","trCl":["TypeType"]},
   {"lox":"UnlikelyToAffectRelationType","sbOf":"RelationType","label":"Is Unlikely To Affect","details":"Topic Map upper UnlikelyToAffect relation type","sIco":"/images/snowflake_sm.png","lIco":"/images/snowflake.png","trCl":["TypeType"]},
   {"lox":"RespondsToRelationType","sbOf":"RelationType","label":"Responds To","details":"Topic Map upper RespondsTo relation type","sIco":"/images/snowflake_sm.png","lIco":"/images/snowflake.png","trCl":["TypeType"]},
-  {"comment":"Adapted from OBO Ontologies and elsewhere"},
   {"lox":"IsRelatedToRelationType","sbOf":"RelationType","label":"Is Related To","details":"Topic Map upper IsRelatedTo relation type","sIco":"/images/snowflake_sm.png","lIco":"/images/snowflake.png","trCl":["TypeType"]},
   {"lox":"IsPartOfRelationType","sbOf":"RelationType","label":"Is Part Of","details":"Topic Map upper IsPartOf relation type","sIco":"/images/snowflake_sm.png","lIco":"/images/snowflake.png","trCl":["TypeType"]},
   {"lox":"IsContainedInRelationType","sbOf":"RelationType","label":"Is Contained In","details":"Topic Map upper IsContainedIn relation type","sIco":"/images/snowflake_sm.png","lIco":"/images/snowflake.png","trCl":["TypeType"]},
   {"lox":"HasRoleRelationType","sbOf":"RelationType","label":"Has Role","details":"Topic Map upper HasRole relation type","sIco":"/images/snowflake_sm.png","lIco":"/images/snowflake.png","trCl":["TypeType"]},
-  {"comment":"Possibly never used"},
   {"lox":"BookmarkRelationType","sbOf":"RelationType","label":"Bookmark","details":"Topic Map upper Bookmark relation type","sIco":"/images/snowflake_sm.png","lIco":"/images/snowflake.png","trCl":["TypeType"]},
   {"lox":"TagRelationType","sbOf":"RelationType","label":"Tag","details":"Topic Map upper Tag relation type","sIco":"/images/snowflake_sm.png","lIco":"/images/snowflake.png","trCl":["TypeType"]},
-  {"comment": "some pivots"},
   {"lox":"TagDocumentRelationType","sbOf":"RelationType","label":"TagDocumentRelation","details":"Topic Map upper TagDocument relation type","sIco":"/images/snowflake_sm.png","lIco":"/images/snowflake.png","trCl":["TypeType"]},
   {"lox":"DocumentTagRelationType","sbOf":"RelationType","label":"DocumentTagRelation","details":"Topic Map upper DocumentTagRelation relation type","sIco":"/images/snowflake_sm.png","lIco":"/images/snowflake.png","trCl":["TypeType"]},
   {"lox":"TagCreatorRelationType","sbOf":"RelationType","label":"TagCreatorRelation","details":"Topic Map upper TagCreator relation type","sIco":"/images/snowflake_sm.png","lIco":"/images/snowflake.png","trCl":["TypeType"]},
@@ -53,6 +48,4 @@
   {"lox":"CreatorDocumentRelationType","sbOf":"RelationType","label":"CreatorDocumentRelation","details":"Topic Map upper CreatorDocument relation type","sIco":"/images/snowflake_sm.png","lIco":"/images/snowflake.png","trCl":["TypeType"]},
   {"lox":"DocumentAnnotationRelationType","sbOf":"RelationType","label":"DocumentAnnotationRelationType","details":"Topic Map upper DocumentAnnotation relation type","sIco":"/images/snowflake_sm.png","lIco":"/images/snowflake.png","trCl":["TypeType"]},
   {"lox":"DocumentTranscluderRelationType","sbOf":"RelationType","label":"DocumentTranscluderRelationType","details":"TQPortal extendion DocumentTranscluder relation type","sIco":"/images/snowflake_sm.png","lIco":"/images/snowflake.png","trCl":["TypeType"]}
-
-  
 ]}
