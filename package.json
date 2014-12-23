@@ -2,7 +2,7 @@
   "scripts": {
     "start": "node index.js"
   },
-  "name": "TQTopicMap",
+  "name": "tqtopicmap",
   "version": "0.12.1",
   "description": "TopicQuests TopicMap for NodeJS",
   "main": "index.js",
