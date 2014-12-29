@@ -2,7 +2,7 @@
   "appenders": [
     {
       "type": "file",
-      "filename": "../logs/development.log",
+      "filename": "./logs/development.log",
       "maxLogSize": 20000000,
       "backups": 20,
       "category": ["relative-logger","TopicMap"]
