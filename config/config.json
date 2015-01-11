@@ -1,6 +1,6 @@
 {
-	"clusters": [ {"host":"localhost","port":"9200"}],
-	"shouldBootstrap":true,
+	"clusters": [ {"host":"localhost","port":"9250"}],
+	"shouldBootstrap":false,
 	"tcpport":2925,
 	"comment": "We can use this to define default admins, etc"
 }
