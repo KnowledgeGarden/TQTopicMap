@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "eslint .",
+    "test": "eslint --ignore-path .gitignore .",
     "start": "node index.js"
   },
   "name": "tqtopicmap",
