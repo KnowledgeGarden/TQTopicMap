@@ -1,6 +1,4 @@
-
-
-# TQTopicMap
+# TQTopicMap [![Build Status](https://travis-ci.org/KnowledgeGarden/TQTopicMap.svg?branch=develop)](https://travis-ci.org/KnowledgeGarden/TQTopicMap)
 A NodeJS version of the [https://github.com/SolrSherlock/JSONTopicMap](https://github.com/SolrSherlock/JSONTopicMap "JSONTopicMap") Java platform
 
 ## Latest
