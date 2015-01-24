@@ -3,11 +3,15 @@
     "start": "node index.js"
   },
   "name": "tqtopicmap",
-  "version": "0.12.3",
+  "version": "0.12.4",
   "description": "TopicQuests TopicMap for NodeJS",
   "main": "index.js",
   "author": "jackpark",
   "license": "Apache 2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KnowledgeGarden/TQTopicMap"
+  },
   "dependencies": {
     "es": "~0.4.4",
     "node-uuid": "~1.4.1",
